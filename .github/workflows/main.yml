@@ -2,15 +2,17 @@ name: Generate Podcast Feeds
 on: [push]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Run Feed Generator
         uses: anurag-bg-neu/podcast-generator@main
 
+
       # Previously without the Generator repository
       # But only using the workflow action of this repo
+      # Previously I ran windows build but now its ubuntu
       # - name: Setup Python
       #   uses: actions/setup-python@v4
       #   with:
